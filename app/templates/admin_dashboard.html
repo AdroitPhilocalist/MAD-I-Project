@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Welcome Admin</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Find</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Stats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <h1 class="text-center">Admin Dashboard</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Active Users</h5>
+                    <p class="card-text">Number of active users: <!-- Placeholder for dynamic data --></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Campaigns</h5>
+                    <p class="card-text">Number of public campaigns: <!-- Placeholder for dynamic data --></p>
+                    <p class="card-text">Number of private campaigns: <!-- Placeholder for dynamic data --></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ad Requests</h5>
+                    <p class="card-text">Number of pending ad requests: <!-- Placeholder for dynamic data --></p>
+                    <p class="card-text">Number of accepted ad requests: <!-- Placeholder for dynamic data --></p>
+                    <p class="card-text">Number of rejected ad requests: <!-- Placeholder for dynamic data --></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Flagged Users</h5>
+                    <p class="card-text">Number of flagged sponsors: <!-- Placeholder for dynamic data --></p>
+                    <p class="card-text">Number of flagged influencers: <!-- Placeholder for dynamic data --></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

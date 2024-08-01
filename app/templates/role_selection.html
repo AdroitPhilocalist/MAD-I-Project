@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Select Role{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Select Your Role</h1>
+    <form action="{{ url_for('login') }}" method="get" class="mt-4">
+        <div class="form-group">
+            <label for="role">Select Role:</label>
+            <select id="role" name="role" class="form-control" required>
+                <option value="admin">Admin</option>
+                <option value="sponsor">Sponsor</option>
+                <option value="influencer">Influencer</option>
+            </select>
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary" value="Proceed">
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+
+

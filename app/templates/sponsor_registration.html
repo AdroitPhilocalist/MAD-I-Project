@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Sponsor Registration{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Sponsor Registration</h1>
+    <form method="POST" action="{{ url_for('sponsor_registration') }}" class="mt-4">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="industry">Industry</label>
+            <select id="industry" name="industry" class="form-control" required>
+                <option selected>None</option>
+                <option value="Technology">Technology</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Food & Beverage">Food & Beverage</option>
+                <option value="Health & Wellness">Health & Wellness</option>
+                <option value="Travel">Travel</option>
+                <option value="Entertainment">Entertainment</option>
+            </select>
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary" value="Register">
+        </div>
+    </form>
+</div>
+{% endblock %}

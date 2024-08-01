@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b3b3ff;">
+    <a class="navbar-brand" href="#">Influencer Dashboard</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('update_profile') }}">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Campaigns</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ad Requests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Left Column for Profile Information -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Profile</h5>
+                    <!-- Profile Image -->
+                    <div class="mb-3">
+                        <img src="profile_image_url" alt="Profile Image" class="img-fluid rounded-circle">
+                    </div>
+                    <!-- Name -->
+                    <p><strong>Name:</strong> <!-- Placeholder for influencer name --></p>
+                    <!-- Niche -->
+                    <p><strong>Niche:</strong> <!-- Placeholder for niche --></p>
+                    <!-- Social Media Platforms -->
+                    <p><strong>Social Media Platforms:</strong> <!-- Placeholder for social media platforms --></p>
+                    <!-- Reach -->
+                    <p><strong>Reach:</strong> <!-- Placeholder for reach --></p>
+                    <!-- Prompt to complete profile if any field is missing -->
+                    <div class="alert alert-warning" role="alert">
+                        Please complete your profile.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column for Active Campaigns and Ad Requests -->
+        <div class="col-md-8">
+            <!-- Active Campaigns -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Active Campaigns</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Budget</th>
+                                    <th>Visibility</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Placeholder for dynamic data -->
+                                <tr>
+                                    <td>Campaign 1</td>
+                                    <td>Description of campaign 1</td>
+                                    <td>2024-01-01</td>
+                                    <td>2024-01-31</td>
+                                    <td>$1000</td>
+                                    <td>Public</td>
+                                </tr>
+                                <!-- Add more campaigns similarly -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Requests -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Ad Requests</h5>
+                    <div class="list-group">
+                        <!-- Example Ad Request Item -->
+                        <div class="list-group-item">
+                            <h5 class="mb-1">Ad Request 1</h5>
+                            <p class="mb-1">Details about the ad request...</p>
+                            <button class="btn btn-success btn-sm">Accept</button>
+                            <button class="btn btn-danger btn-sm">Reject</button>
+                            <button class="btn btn-warning btn-sm">Negotiate</button>
+                        </div>
+                        <!-- Add more ad requests similarly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
